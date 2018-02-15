@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica Neue, Helvetica, sans-serif;
+}
+
+.sidebar {
+    background: #2980b9;
+    width: 300px;
+    border-radius: 10px;
+    margin: 0;
+    color: #FFF;
+    padding: 20px;
+    position: absolute;
+    left: 40px;
+    top: 40px;
+}
+
+.game {
+    width: 800px;
+    position: absolute;
+    left: 300;
+    top: 0;
+    margin: 0;
+}
+
+.bubble {
+    position: absolute;
+    opacity: 0.4;
+}
+
+#description {
+    font-weight: 300;
+}
+
+#notify {
+    width: 400px;
+    height: 40px;
+    padding: 20px;
+    margin: 20px;
+    background: #3498db;
+    text-align: center;
+    box-shadow: 0 0 20px -3px #333;
+    position: absolute;
+    left: 400px;
+    top: 300px;
+    border-radius: 2px;
+
+}
+
+#score {
+    font-family: Helvetica, sans-serif;
+    line-height: 35px;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.counters {
+    font-weight: bold;
+    font-size: 36px;
+    font-weight: 300;
+    padding: 2px;
+    border-radius: 5px;
+    width: 200px;
+}
+
+#title,
+#subtitle,
+#description {
+    width: 200px
+}
