@@ -16,20 +16,20 @@ function moveBalls() {
     var size, top, left, radius, shadowWidth;
 
     if (count % 20 == 0) {
-        size = Math.floor(Math.random() * 100);
-        left = Math.floor(Math.random() * 601) + 500;
+        size = Math.floor(Math.random() * 80) + 5;
+        left = Math.floor(Math.random() * 601) + 200;
         color = '#' + Math.floor(Math.random() * 16777215).toString(16);
         radius = size / 2;
         shadowWidth = size / 3;
         shadowBlur = size / 7;
-        $('body').append('<div class="bubble" style="height:' + size + 'px; width:' + size + 'px; background:' + color + ' ; border-radius:' + radius + 'px; top: 0px; left: ' + left + 'px; "></div> ')
+        $('.game').append('<div class="bubble" style="height:' + size + 'px; width:' + size + 'px; background:' + color + ' ; border-radius:' + radius + 'px; top: 0px; left: ' + left + 'px; "></div> ')
         ballsLeft--;
         $('#ballCounter').html(ballsLeft);
     }
 
     $('.bubble').each(function () {
         var position = $(this).position(); // get top position
-        if (position.top > 600) { // if position is above 1024 destroy object
+        if (position.top > 500) { 
             $(this).remove();
         } else { // if not then increase the position css by 1 px; 
             $(this).css('top', position.top + levelCount);
@@ -103,7 +103,7 @@ $(function () {
 
             }
             radius = Math.floor(size / 2);
-            $('body').append('<div class="bubble split" style="height:' + size + 'px; width:' + size + 'px; background:' + color + ' ; border-radius:' + radius + 'px; top: ' + top + 'px; left: ' + left + 'px; "></div> ')
+            $('.game').append('<div class="bubble split" style="height:' + size + 'px; width:' + size + 'px; background:' + color + ' ; border-radius:' + radius + 'px; top: ' + top + 'px; left: ' + left + 'px; "></div> ')
             splitCount++;
             highScore = splitCount;
             $('#scoreCounter').html(splitCount);
